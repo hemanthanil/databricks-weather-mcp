@@ -59,7 +59,7 @@ Because Open-Meteo does not require authentication, no API keys or secrets are c
 │   └── system_prompt.md
 │
 ├── screenshots/
-│   └── ...
+│   
 │
 └── README.md
 ```
@@ -117,7 +117,7 @@ Applies simple deterministic rules to the forecast and returns weather-related t
 Rules currently used:
 
 * Recommend an umbrella if precipitation probability is at least 40%
-* Recommend a jacket if the forecast low is 15°C or colder
+* Recommend a jacket if the forecast low is 12°C or colder
 * Add a heat caution if the forecast high is at least 30°C
 * Add a wind caution if maximum wind speed is at least 40 km/h
 
@@ -224,31 +224,6 @@ The agent is instructed to explain tool failures and ask the user to clarify the
 
 The Databricks agent is configured with weather-specific tool-selection rules and guardrails.
 
-Key rules include:
-
-```text
-You are a weather intelligence assistant.
-
-Always use the available weather tools before answering weather
-questions. Never invent current, forecast, or historical weather data.
-
-Tool selection:
-
-- Use get_current_weather for current conditions.
-- Use get_forecast for future weather and multi-day forecasts.
-- Use get_travel_recommendation for umbrella, jacket, heat,
-  wind, or travel-preparation questions.
-- Use compare_weather when comparing multiple locations.
-- Use get_historical_weather for dates in the past.
-
-Guardrails:
-
-- If a location cannot be resolved, ask the user to clarify.
-- If a tool returns an error, explain the failure rather than guessing.
-- Base weather descriptions only on values returned by tools.
-- Clearly distinguish forecast information from certainty.
-- Do not invent weather classifications not returned by the tools.
-```
 
 The system prompt is stored in:
 

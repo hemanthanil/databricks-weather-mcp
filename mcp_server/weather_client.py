@@ -245,7 +245,7 @@ def get_travel_recommendation(
 
     Rules:
     - Umbrella recommended when precipitation probability >= 40%.
-    - Jacket recommended when daily low <= 15 C.
+    - Jacket recommended when daily low <= 12 C.
     - Heat caution when daily high >= 30 C.
     - Wind caution when maximum wind >= 40 km/h.
 

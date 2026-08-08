@@ -27,7 +27,6 @@ def get_current_weather(location: str) -> dict:
 
     try:
         return weather_client.get_current_weather(location)
-
     except Exception as exc:
         return {
             "status": "error",
