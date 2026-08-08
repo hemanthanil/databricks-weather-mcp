@@ -3,6 +3,10 @@
 
 This project was built for Day 3 homework using the `databricks-lakebase-app-day-3` repository as a reference pattern.
 
+## Databricks App URLs 
+
+https://mcp-weather-intelligence-7474645453950500.aws.databricksapps.com
+
 The goal was to build a weather-focused MCP server, deploy it as a Databricks App, and connect it to a Databricks Agent so the agent can answer current weather, forecast, historical weather, and recommendation questions through tool calls.
 
 ## Architecture
